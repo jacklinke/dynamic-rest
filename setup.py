@@ -1,21 +1,22 @@
 from setuptools import find_packages, setup
 
-NAME = 'dynamic-rest'
-DESCRIPTION = 'Dynamic API support to Django REST Framework.'
-URL = 'http://github.com/AltSchool/dynamic-rest'
-VERSION = '2.1.7'
-SCRIPTS = ['manage.py']
-
 setup(
-    description=DESCRIPTION,
+    description="Dynamic API support to Django REST Framework.",
     include_package_data=True,
-    install_requires=open('install_requires.txt').readlines(),
-    long_description=open('README.rst').read(),
-    name=NAME,
+    install_requires=[
+        "Django",
+        "djangorestframework",
+        "inflection",
+        "requests",
+        "hashids",
+        "six",
+    ],
+    long_description="Dynamic API support to Django REST Framework.",
+    name='dynamic-rest',
     packages=find_packages(),
-    scripts=SCRIPTS,
-    url=URL,
-    version=VERSION,
+    scripts=['manage.py'],
+    url='http://github.com/jacklinke/dynamic-rest',
+    version='2.1.7',
     classifiers=[
         'Framework :: Django',
         'Intended Audience :: Developers',
